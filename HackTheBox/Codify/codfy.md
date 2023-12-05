@@ -1,6 +1,6 @@
 # Codify
 
-![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205144333.png?raw=true | width=100)
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205144333.png?raw=true width="400" height="790")
 
 Write Up
 --------
