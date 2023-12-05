@@ -11,7 +11,7 @@ Para comenzar, nos tenemos que asegurar de que la máquina está activa. Para el
 
 Una vez nos aseguramos de que la máquina está activa, pasamos a la fase de **reconocimiento**
 
-#### Reconocimiento
+## Reconocimiento
 
 Empezamos la fase de reconocmiento. Para ello hacemos uso de la herramienta **Nmap**, que nos permitirá reconocer los puertos que están abiertos. Existen 3 tipos de estados en cuanto a puertos.
 1) Abierto (open)
@@ -43,28 +43,28 @@ nmap -sCV -p22,80,3000 <IP> -oN targeted
 
 Ejecutando este comando, **nmap** ejecutará un conjunto de scripts donde nos proporcionará información sobre los servicios y versiones que corren por detrás de cada puerto. En este caso:
 
-![[Pasted image 20231205150042.png | 800]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205150042.png?raw=true)
 
-#### Explotación
+## Explotación
 
 Si nos metemos en la web mediante la IP, nos sale lo siguiente:
 
-![[Pasted image 20231205150259.png | 600]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205150259.png?raw=true)
 
 **¿Cómo podemos solucionar esto?**
 
 Este error significa que la dirección IP asociada con ese dominio, no se está resolviendo correctamente. Para resolverlo, tenemos que añadir esa dirección al `/etc/hosts`
 
-![[Pasted image 20231205150753.png]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205150753.png?raw=true)
 
 Esto hará que cuando pongamos la dirección IP en la url del navegador, se resolverá a la dirección de dominio **`codify.htb`**
 
 Al guardar el archivo y refrescar la web:
 
-![[Pasted image 20231205151222.png | 1000]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205151222.png?raw=true)
 
 Si nos vamos a la ventana de *About Us*: 
-![[Pasted image 20231205151434.png | 1000]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205151434.png?raw=true)
 
 Podemos ver que en el editor, está implementada la librería **vm2**.
 
