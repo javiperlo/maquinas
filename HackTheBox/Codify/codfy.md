@@ -108,7 +108,7 @@ console.log(vm.run(code));
 
 Y nos ponemos en escucha con **netcat** en el puerto especificado:
 
-![[Pasted image 20231205152257.png | 1000]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205152257.png?raw=true)
 
 Una vez hemos conseguido una **reverse shell**, seguiremos con el tratamiento de la TTY.
 
@@ -133,13 +133,13 @@ Vamos a donde está almacenada la web: **`/var/www/`** y aquí tenemos 3 carpeta
 
 Nos metemos en la carpeta **`contact`** y hacemos un cat del archivo `tickets.db`
 
-![[Pasted image 20231205170029.png |800]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205170029.png?raw=true)
 
 Como podemos comprobar, tenemos el usuario: `joshua` y la contraseña que es todo lo que sigue. La cual está hasheada.
 
 Para poder dehashear la contraseña, utilizaremos **john the ripper**. 
 
-![[Pasted image 20231205170214.png |600]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205170214.png?raw=true)
 
 La contraseña es: **spongebob1**
 
@@ -148,7 +148,7 @@ e introducir la contraseña. Yo he preferido quedarme en la terminal que tengo a
 
 Y haciendo **`ls`** encontramos la *flag* de **user** por lo que nos quedaría encontrar la flag de root.
 
-#### Escalada de privilegios
+## Escalada de privilegios
 
 El útlimo paso sería escalar privilegios en la máquina.
 
@@ -168,18 +168,18 @@ Por lo que probamos con otro comando:
 sudo -l
 ```
 
-![[Pasted image 20231205171125.png |900]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205171125.png?raw=true)
 
 Vemos que tenemos ese archivo.
 
-![[Pasted image 20231205171323.png]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205171323.png?raw=true)
 
 **Casualmente** en el direcotrio 'joshua' hay un script programado en python que ejecuta el programa **`mysql-backup.sh`**, el cual, al ejecutarlo, nos va a mostrar la contraseña de root.
 
-![[Pasted image 20231205171621.png | 600]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205171621.png?raw=true)
 
 Por último:
 
-![[Pasted image 20231205171744.png | 500]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205171744.png?raw=true)
 
 ### Hasta aquí :)
