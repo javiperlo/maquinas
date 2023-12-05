@@ -28,7 +28,7 @@ Esto hará que un escaneo de los 65535 puertos y nos devolverá en un archivo lo
 
 En este caso, odemos observar estos puertos abiertos:
 
-![[Pasted image 20231205145448.png | 900]]
+![alt text](https://github.com/javiperlo/maquinas/blob/main/HackTheBox/Codify/images/Pasted%20image%2020231205145448.png?raw=true)
 
 Como podemos observar, tenemos 3 puertos abiertos. 
 - 22 (ssh)
